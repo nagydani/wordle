@@ -4,8 +4,7 @@ import qualified Data.Map.Strict as M
 import Words
 
 green :: String -> String -> [Bool]
-green [] [] = []
-green (x:xs) (y:ys) = (x == y) : (green xs ys)
+green = zipWith (==)
 
 yellow :: String -> String -> [Bool]
 yellow hidden guess =
